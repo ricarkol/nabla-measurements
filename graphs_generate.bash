@@ -19,10 +19,10 @@ APPS="node-express redis-test python-tornado"
 SYSTEMS="kata runc runsc runnc runsck"
 
 for s in $SYSTEMS; do
-    for ((i=1;i<=10;i++)); do
+    for ((i=1;i<=2;i++)); do
         for a in $APPS; do
-            sudo ./runtest.bash $s nablact/$a results/$s-$a-$i;
-            sleep 5
+            #sudo ./runtest.bash $s nablact/$a results/$s-$a-$i;
+            sleep 0
         done;
     done;
 done
